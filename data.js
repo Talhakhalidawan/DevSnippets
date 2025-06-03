@@ -1,39 +1,27 @@
 // DevSnippets data
 const snippetsData = [
     {
-        "id": "springy-scroll",
-        "title": "Springy Scroll Effect",
-        "description": "Just paste this code in your head tag to make your scroll with the lenis scroll effect or you can say it springy scroll or eco effect",
+        "id": "Smooth-Springy-Scrolling",
+        "title": "Smooth Springy Scrolling with Lenis.js",
+        "description": "Just paste this code in your head tag to implement a buttery-smooth, springy scroll effect using Lenis.js. This creates a natural, inertia-based scrolling animation, giving your webpage a modern and fluid feel. Great for portfolio sites, landing pages, and creative scrolling experiences.",
         "code": `\n<script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>\n<script>\nconst lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });\nfunction raf(time) {\n    lenis.raf(time);\n    requestAnimationFrame(raf);\n}\nrequestAnimationFrame(raf);\n</script>\n`,
         "language": "css",
-        "tags": ["css", "animation", "scroll", "html", "javascript"],
-        "url": "tricks/springy-scroll.html"
+        "tags": ["css", "animation", "smooth-scroll", "scroll", "html", "lenis.js", "UX"],
     },
     {
-        "id": "debounce-function",
-        "title": "Debounce Function",
-        "description": "A utility function to limit how often a function is called, useful for search inputs or resize events.",
-        "code": "function debounce(func, delay = 300) {\n  let timeout;\n  \n  return function(...args) {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => {\n      func.apply(this, args);\n    }, delay);\n  };\n}\n\n// Usage\nconst debouncedSearch = debounce((query) => {\n  // Search implementation\n  console.log('Searching for:', query);\n}, 500);\n\nsearchInput.addEventListener('input', (e) => {\n  debouncedSearch(e.target.value);\n});",
-        "language": "javascript",
-        "tags": ["javascript", "performance", "utility"],
-        "url": "tricks/debounce-function.html"
-    },
-    {
-        "id": "async-error-handling",
-        "title": "Async/Await Error Handling",
-        "description": "A clean pattern for handling errors in async/await functions without try/catch blocks.",
-        "code": "// Helper function to handle async operations\nconst asyncHandler = async (promise) => {\n  try {\n    const data = await promise;\n    return [data, null];\n  } catch (error) {\n    return [null, error];\n  }\n};\n\n// Usage\nasync function fetchUserData(userId) {\n  const [data, error] = await asyncHandler(fetch(`/api/users/${userId}`));\n  \n  if (error) {\n    console.error('Failed to fetch user:', error);\n    return null;\n  }\n  \n  return data.json();\n}",
-        "language": "javascript",
-        "tags": ["javascript", "async", "error-handling"],
-        "url": "tricks/async-error-handling.html"
-    },
-    {
-        "id": "css-grid-auto-fill",
-        "title": "CSS Grid Auto-Fill",
-        "description": "Create a responsive grid layout that automatically adjusts the number of columns based on available space.",
-        "code": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));\n  grid-gap: 20px;\n}\n\n.grid-item {\n  background-color: #f0f0f0;\n  padding: 20px;\n  border-radius: 4px;\n}",
+        "id": "Scroll-Animation-Without-JavaScript",
+        "title": "CSS-Only Scroll Animation",
+        "description": "Use the view() function to achieve the scroll animation without using JavaScript, for more information see video on <a href='https://www.youtube.com/watch?v=pFtxR-O78sY&t=118s'>Youtube</a><br>💡 Note: This is currently a part of experimental CSS features (View Transitions). Ensure you're using a browser that supports it (like Chromium-based browsers).",
+        "code": "/* Rotate on Scroll */\n.rotate-on-scroll {\n    animation: rotateOnScroll;\n    animation-timeline: view(); /*This makes the animation show as user scrolls*/ \n}\n\n@keyframes rotateOnScroll {\n    from {\n        transform: rotate(0deg);\n    }\n    to {\n        transform: rotate(360deg);\n    }\n}",
         "language": "css",
-        "tags": ["css", "grid", "responsive", "layout"],
-        "url": "tricks/css-grid-auto-fill.html"
+        "tags": ["css", "scroll-animation", "animation-timeline", "modern-css"],
+    },
+    {
+        "id": "Scroll-Progress-Bar",
+        "title": "Scroll Progress Bar Using CSS Scroll Timeline",
+        "description": "Implement a scroll progress indicator that fills as the user scrolls through the page, using the animation-timeline: scroll(); property. This provides visual feedback on the user's scroll position without relying on JavaScript.",
+        "code": "/* Scroll Progress Bar */\n#progress-bar {\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 4px;\n    width: 100%;\n    background: linear-gradient(to right, #4caf50 0%, #4caf50 100%);\n    transform: scaleX(0);\n    transform-origin: left;\n    animation: grow-progress linear forwards;\n    animation-timeline: scroll();\n}\n\n@keyframes grow-progress {\n    to {\n        transform: scaleX(1);\n    }\n}",
+        "language": "css",
+        "tags": ["css", "scroll-progress", "animation-timeline", "modern-css"],
     }
 ]; 

@@ -48,7 +48,6 @@ We welcome contributions! Here's how you can add a new programming trick:
   "code": "// Your code snippet here\nfunction example() {\n  // ...\n}",
   "language": "javascript", // Language for syntax highlighting
   "tags": ["javascript", "utility", "relevant-tags"],
-  "url": "tricks/your-trick-name.html"
 }
 ```
 
