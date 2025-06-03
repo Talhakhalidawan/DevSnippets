@@ -4,7 +4,7 @@ const snippetsData = [
         "id": "springy-scroll",
         "title": "Springy Scroll Effect",
         "description": "Just paste this code in your head tag to make your scroll with the lenis scroll effect or you can say it springy scroll or eco effect",
-        "code": `{\n<script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>\n<script>const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });\nfunction raf(time) {\n    lenis.raf(time);\n    requestAnimationFrame(raf);\n}\nrequestAnimationFrame(raf);\n</script>\n`,
+        "code": `\n<script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>\n<script>const lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });\nfunction raf(time) {\n    lenis.raf(time);\n    requestAnimationFrame(raf);\n}\nrequestAnimationFrame(raf);\n</script>\n`,
         "language": "css",
         "tags": ["css", "animation", "scroll", "html", "javascript"],
         "url": "tricks/springy-scroll.html"
