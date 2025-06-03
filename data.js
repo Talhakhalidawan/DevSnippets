@@ -5,7 +5,7 @@ const snippetsData = [
         "title": "Smooth Springy Scrolling with Lenis.js",
         "description": "Just paste this code in your head tag to implement a buttery-smooth, springy scroll effect using Lenis.js. This creates a natural, inertia-based scrolling animation, giving your webpage a modern and fluid feel. Great for portfolio sites, landing pages, and creative scrolling experiences.",
         "code": `\n<script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>\n<script>\nconst lenis = new Lenis({ duration: 1.2, easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });\nfunction raf(time) {\n    lenis.raf(time);\n    requestAnimationFrame(raf);\n}\nrequestAnimationFrame(raf);\n</script>\n`,
-        "language": "css",
+        "language": "javascript",
         "tags": ["css", "animation", "smooth-scroll", "scroll", "html", "lenis.js", "UX"],
     },
     {
