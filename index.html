@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSnippets - Programming Tricks Collection</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/toolbar/prism-toolbar.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta name="description" content="A collection of useful programming tricks discovered during development - browse, search, and copy code snippets easily.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="images/logo.png" alt="DevSnippets Logo"></div>
+            <p>A collection of useful programming tricks discovered during development</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <div class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+        </div>
+
+        <div id="search-results" class="results-container">
+            <!-- Search results will be dynamically populated here -->
+            <div class="loading-message">
+                <div class="loader"></div>
+                <p>Loading snippets...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>DevSnippets &copy; 2023 | <a href="https://github.com/yourusername/devsnippets" target="_blank">GitHub Repository</a></p>
+            <p>Made with ❤️ by <a href="https://talha.awesomesolutions.tech/" target="_blank">Talha Khalid</a> at <a href="https://www.awesomesolutions.tech/" target="_blank">Awesome Solutions</a></p>
+        </div>
+    </footer>
+
+    <div id="copied-message" class="copied-message" style="display: none;">Copied to clipboard!</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
