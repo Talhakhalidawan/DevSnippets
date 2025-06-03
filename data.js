@@ -23,5 +23,13 @@ const snippetsData = [
         "code": "/* Scroll Progress Bar */\n#progress-bar {\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 4px;\n    width: 100%;\n    background: linear-gradient(to right, #4caf50 0%, #4caf50 100%);\n    transform: scaleX(0);\n    transform-origin: left;\n    animation: grow-progress linear forwards;\n    animation-timeline: scroll();\n}\n\n@keyframes grow-progress {\n    to {\n        transform: scaleX(1);\n    }\n}",
         "language": "css",
         "tags": ["css", "scroll-progress", "animation-timeline", "modern-css"],
+    },
+    {
+        "id": "Masonary-Grid-Layout-Using-only-one-line-of-css",
+        "title": "Responsive Masonary Grid Layout Using only one line of css",
+        "description": "When we say columns 300px the system will use 300px as a standard to devide the columns which means as long as there is enough space to devide another column with a size of 300px there will be another column, when the screen gets smaller the number of columns will automatically decrease<br>Credits to <a href='https://www.youtube.com/watch?v=x1qlKvJdHzI'>LunDev</a>",
+        "code": `.list img {\n    width: 100%;\n    margin-bottom: 1rem;\n}\n.list {\n    columns: 400px;\n}`,
+        "language": "css",
+        "tags": ["css", "masonary-grid", "responsive", "modern-css"],
     }
 ]; 
