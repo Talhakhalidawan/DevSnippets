@@ -69,4 +69,5 @@ MIT License
 ## 🙏 Acknowledgments
 
 - [Lunr.js](https://lunrjs.com/) for search functionality
-- [Prism.js](https://prismjs.com/) for syntax highlighting 
+- [Prism.js](https://prismjs.com/) for syntax highlighting
+- 
